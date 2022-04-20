@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf入门</title>
+</head>
+<body>
+<span th:text="Hello"></span>
+<hr/>
+<table>
+    <tr >
+        <td >id</td>
+        <td >姓名</td>
+        <td>账号</td>
+        <td>电话</td>
+    </tr>
+    <tr th:each="page : ${list}">
+        <td th:text="${page.id}"></td>
+        <td th:text="${page.name}"></td>
+        <td th:text="${page.zhanghao}"></td>
+        <td th:text="${page.phone}"></td>
+    </tr>
+
+</table>
+
+<button><a th:href="tiaoadd">添加</a></button>
+</body>
+</html>

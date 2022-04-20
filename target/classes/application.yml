@@ -1,0 +1,19 @@
+# 层级要求很严格  每一级前面两个空格
+server:
+  port: 8080
+
+mybatis:
+  type-aliases-package: com.usian.pojo
+  mapper-locations: classpath:mappers/*.xml
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/p9db
+    username: root
+    password: 1234
+    type: com.alibaba.druid.pool.DruidDataSource
+logging:
+        level:
+          com:
+            usian:
+              mapper: debug

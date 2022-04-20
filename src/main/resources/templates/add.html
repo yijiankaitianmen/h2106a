@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <script  ></script>
+    <title> </title>
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+</head>
+<body>
+
+     账号：<input type="text" id="zhanghao">
+
+
+     <input type="button" value="提交" onclick="save()">
+
+
+
+
+<script>
+    function save(){
+        var userName = $("#zhanghao").val();
+        $.post("/add", {zhanghao:zhanghao
+        }, function(result) {
+            if (result.success) {
+                window.location.href="/findpage";
+            } else {
+                alert(result.msg);
+            }
+        }, 'json');
+    }
+
+
+</script>
+
+</body>
+</html>
