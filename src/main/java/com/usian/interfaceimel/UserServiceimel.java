@@ -15,6 +15,7 @@ public class UserServiceimel implements UserService {
     UserMapper userMapper;
     @Override
     public List<User> fiandpage() {
+
         return  userMapper.fiandpage();
     }
 
