@@ -1,0 +1,16 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.usian.mapper.UserMapper">
+
+
+    <update id="dupdate" parameterType="com.usian.pojo.User">
+UPDATE `delun`.`user` SET `name` = #{name}, `zhanghao` = #{zhanghao}, `phone` = #{phone} WHERE `id` = #{id};
+
+    </update>
+    <delete id="del" parameterType="integer">
+        delete from `delun`.`user` where id=#{id}
+    </delete>
+
+</mapper>
+
