@@ -26,13 +26,13 @@ public class UserController {
     }
 
     @RequestMapping("/add")
-    @ResponseBody
-    public  JSONObject add(@Param(value = "zhanghao")String zhanghao){
-        userService.add(zhanghao);
+    //@ResponseBody
+    public  String add(String name,Model model){
+        userService.add(name);
         JSONObject result = new JSONObject();
         result.put("success", true);
         result.put("msg", "添加成功");
-        return result;
+        return this.test(model);
     }
 
   @RequestMapping("/tiaoadd")

@@ -2,18 +2,18 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <script  ></script>
+    <script></script>
     <title> </title>
-    <script type="text/javascript" src="../static/js/jquery-3.4.1.js"></script>
+
 </head>
 <body>
 
-     账号：<input type="text" id="zhanghao">
+<form action="/user/add" method="get">
+     账号：<input type="text" name="name" id="zhanghao">
 
+     <input type="submit" value="提交">
 
-     <input type="button" value="提交" onclick="save()">
-
-
+</form>
 
 
 <script>
